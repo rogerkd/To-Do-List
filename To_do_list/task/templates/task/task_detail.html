@@ -1,0 +1,24 @@
+{% extends 'task/master.html' %}
+
+{% block title %}
+<title> task detail </title>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+
+        <a href="{% url 'a' %}"> Go Back </a>
+
+        <h1 style="color:orange;"> Task: {{b.title}} </h1>
+        <h2> ===+ {{b.description}} </h2>
+        <h3> Created on {{b.created}} </h3>
+
+        {% if b.complete is True %}
+            <h4> Task Accomplished </h4>
+        {% else %}
+            <h4> Task Not Accomplished </h4>
+        {% endif %}
+
+    </div>
+    
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends 'task/master.html' %}
+
+{% block title %}
+    <title> task list </title>
+{% endblock %}
+
+{% block content %}
+    <div class='container1'>
+
+        {% if user.is_authenticated and user.is_staff %}
+            <h2> This is ADMIN Panel. </h2>
+
+        {% elif user.is_authenticated %}
+
+            <div class="header-bar">     
+                    <h2> Hello {{user.first_name}}, your To Do List!! </h2>
+                    <a href="{% url 'task-create' %}"><b>Add Task</b></a> 
+                    
+            </div>
+
+
+            <div id="search-add-wrapper">
+                <form action="" method="GET">
+                    <input type="text" name="search-area" placeholder="Search your task" value="{{search_input}}">
+                   
+                </form>
+            </div>
+
+            {% if tot_task is 0 %}
+                <div style="text-align: center; padding-bottom: 10px; line-height: 1em; background-color: white;">
+                    <h4> ------No Tasks------ </h4>
+                </div>
+            {% else %}
+                {% for i in a %}
+                    <div class="task-wrapper">
+                            {% if i.complete is True %}
+                                <div class="task-complete-icon"></div>
+                                <i><s><a href="{% url 'b' i.id %}"> {{i.title}} </a></s></i>
+                            
+                            {% else %}
+
+                                <div class="task-incomplete-icon"></div>
+                                <a href="{% url 'b' i.id %}"> {{i.title}} </a>
+                            
+                            {% endif %}
+                        
+                            <a  class="update-link" href="{% url 'task-update' i.id %}"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+                                <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
+                            </svg> </a>
+                            <a  class="delete-link" href="{% url 'task-delete' i.id %}"> &#215; </a>    
+                    </div>
+
+                {% endfor %}
+
+                {% if search_flag is False %}
+                    <div style="text-align: center; padding-bottom: 10px; line-height: 1em; background-color: white;">
+                        <h4> ------No match results------ </h4>
+                    </div>
+                {% endif %}
+
+            {% endif %}
+
+            
+        {% else %}
+            <h2> Sign In to see your To Do List </h2>
+        {% endif %}
+    
+    </div>
+    
+{% endblock %}

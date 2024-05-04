@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+
+body {
+    background-color:lavender;
+    font-family: 'Nunito', sans-serif;
+    padding-top: 50px;
+}
+
+.container1 {
+    max-width: 550px;
+    margin: auto;
+    background-color: white;
+
+}
+
+.container1 a{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.container {
+    max-width: 550px;
+    margin: auto;
+    background-color: white;
+
+}
+
+.container a{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+  
+input[type=email], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=Numeric], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+  
+input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+  
+input[type=submit] {
+width: 100%;
+background-color: #4CAF50;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/* .searchbar input[type=submit] {
+    width: 100%;
+    background-color: #edadd7;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+} */
+
+
+div {
+border-radius: 5px;
+background-color: #f2f2f2;
+padding: 20px;
+}
+
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: auto; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color:black; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+
+  .sidenav p {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+.header-bar {
+display: flex;
+justify-content: space-between;
+color: #fff;
+padding: 10px;
+border-radius: 5px 5px 0 0;
+background: linear-gradient(90deg, #ee90c7 0%, #f661d5 43%, #EB796F 100%);
+}
+
+.header-bar a {
+    color: rgb(247, 247, 247);
+    text-decoration: none;
+}
+
+.task-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border-top: 1px solid #dfe4ea;
+    overflow: hidden;
+}
+
+
+.task-complete-icon {
+    height: 2px;
+    width: 2px;
+    background-color: rgb(105, 192, 105);
+    border-radius: 50%;
+}
+
+.task-complete-icon a {
+    text-decoration: none;
+    color: #4b5156;
+    margin-left: 10px;
+}
+
+
+.task-incomplete-icon {
+    height: 2px;
+    width: 2px;
+    background-color: rgb(218, 218, 218);
+    border-radius: 50%;
+}
+
+.task-incomplete-icon a {
+    text-decoration: none;
+    color: #4b5156;
+    margin-left: 10px;
+}
+
+.delete-link {
+    text-decoration: none;
+    font-weight: 900;
+    color: #cf4949;
+    font-size: 22px;
+    line-height: 0;
+    padding: 20px 0px;
+}
+
+.update-link {
+    text-decoration: none;
+    font-weight: 900;
+    color: #494ecf;
+    font-size: 22px;
+    line-height: 0;
+    padding:  0px;
+}
+
+#search-add-wrapper {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    padding: 20px;
+}
+
+  
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+transition: margin-left .5s;
+padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+.sidenav {padding-top: 15px;}
+.sidenav a {font-size: 18px;}
+}
+
+
+.signup-box {
+width: 360px;
+height: auto;
+margin-top: 50px;
+margin-bottom: 100px;
+margin-right: auto;
+margin-left: auto;
+background-color: white;
+border-radius: 3px;
+}
+
+.signin-box {
+width: 360px;
+height: auto;
+margin-top: 90px;
+margin-bottom: 100px;
+margin-right: auto;
+margin-left: auto;
+border-radius: 3px;
+background-color: white;
+}
+
+.user_password_reset-box {
+    width: 360px;
+    height: auto;
+    margin-top: 90px;
+    margin-bottom: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 3px;
+    background-color: white;
+}
+
+.change_password-box {
+width: 360px;
+height: auto;
+margin-top: 90px;
+margin-bottom: 100px;
+margin-right: auto;
+margin-left: auto;
+border-radius: 3px;
+background-color: white;
+}
+
+.para {
+    margin-top: -90px;
+    text-align: center;
+    color: rgb(14, 14, 14);
+    border-radius: 3px;
+}
+
+.button {
+    background-color: #e7e7e7;
+    border: none;
+    color: rgb(70, 233, 61);
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: rgb(129, 235, 145);
+    color: rgb(46, 47, 46);
+    border: 2px solid #555555;
+}
+
+.button1:hover {
+    background-color: #17f735;
+    color: white;
+}
+
+a {
+    text-decoration:none;
+}
+.btn-close {
+    background-color : transparent;
+    border: 0;
+    font-size : 20px;
+    position : absolute;
+    cursor : pointer;
+    right : 5px;
+    top : 2px;
+}
+  
+.btn-close:hover {
+    color : red;
+    opacity : 0.7;
+}
+
+.msg {
+    width: auto;
+    height: auto;
+    margin: auto;
+    border-radius: auto;
+    position : relative;
+    background-color: rgb(175, 246, 209);
+}
+
+.msg1 {
+    width: auto;
+    height: auto;
+    margin: auto;
+    position : relative;
+    border-radius: auto;
+    background-color: rgb(198, 123, 123);
+}
+
+
+textarea {
+    border: 1px solid #757575;
+    border-radius: 5px;
+    padding: 10px;
+    width: 90%;
+}
+
+label {
+    padding-top: 10px !important;
+    display: block;
+}
+
+::placeholder {
+    font-weight: 300;
+    opacity: 0.5;
+}
+
+/* .searchbar {
+    border: 1px solid #757575;
+    background-color: #FFF;
+    color: #EB796F;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+} */
+
+

@@ -1,0 +1,19 @@
+{% extends 'task/master.html' %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+
+        <a href="{% url 'a' %}"> Go Back </a>
+
+        <form action="" method="POST">
+        {% csrf_token %}
+            <p> Are you sure you want to delete this task? "{{b.title}}" </p>
+            <input type='submit' value="Delete">
+
+        </form>
+    </div>
+{% endblock %}
